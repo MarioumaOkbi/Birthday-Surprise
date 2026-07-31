@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fff, #ffe6ec);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#entry {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.heart {
+  position: fixed;
+  bottom: -10px;
+  animation: float 6s linear infinite;
+  font-size: 20px;
+}
+
+@keyframes float {
+  0% {transform: translateY(0); opacity: 1;}
+  100% {transform: translateY(-100vh); opacity: 0;}
+}
+
+.section {
+  padding: 100px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 180px;
+  height: 120px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card:hover {
+  background: #ffd6e0;
+}
+
+.hidden {
+  display: none;
+}
+
+#riddleBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  z-index: 2000;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="entry" onclick="startExperience()">
+  <h1>Tap to open your surprise ❤️</h1>
+</div>
+<audio id="music" loop>
+  <source src="love-on-the-brain.mp3" type="audio/mp3">
+</audio>
+<div id="videoPopup" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; justify-content:center; align-items:center; flex-direction:column; z-index:999;">
+  <video id="introVideo" width="80%" controls>
+    <source src="your-video.mp4" type="video/mp4">
+  </video>
+  <p style="color:white;">A glimpse of our journey ❤️</p>
+</div>
+<div class="section">
+  <h2>My Love ❤️</h2>
+  <p style="max-width:600px;margin:auto;">
+    It’s been almost 4 years since we met… and every day,
+    my love and respect for you grow more and more.
+    <br><br>
+    You are my safe place, my happiness,
+    and the most incredible partner and father.
+  </p>
+</div>
+<div class="section" id="birthday">
+  <h1>HAPPY BIRTHDAY AR’OSHY 🎉</h1>
+</div>
+<div class="section">
+  <h2>Choose your gift 🎁</h2>
+  <div class="cards">
+    <div class="card" onclick="chooseGift()">Ultimate Experience</div>
+    <div class="card" onclick="chooseGift()">Ultimate Gift</div>
+    <div class="card" onclick="chooseGift()">Mix & Match</div>
+  </div>
+</div>
+<div id="mixMatch" class="section hidden">
+  <h2>You got… MIX & MATCH 😏❤️</h2>
+  <div class="cards">
+    <div class="card" onclick="openRiddle(0)">?</div>
+    <div class="card" onclick="openRiddle(1)">?</div>
+    <div class="card" onclick="openRiddle(2)">?</div>
+    <div class="card" onclick="openRiddle(3)">?</div>
+    <div class="card" onclick="openRiddle(4)">?</div>
+  </div>
+</div>
+<div id="riddleBox">
+  <h3 id="riddleText"></h3>
+  <input type="text" id="answerInput" placeholder="Your answer...">
+  <button onclick="checkAnswer()">Submit</button>
+</div>
+<script>
+function startExperience() {
+  document.getElementById("entry").style.display = "none";
+  document.getElementById("videoPopup").style.display = "flex";
+  document.getElementById("music").play();
+}
+
+document.getElementById("introVideo").onended = function() {
+  document.getElementById("videoPopup").style.display = "none";
+};
+
+setInterval(() => {
+  let heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 500);
+
+function chooseGift() {
+  document.getElementById("mixMatch").classList.remove("hidden");
+  document.getElementById("mixMatch").scrollIntoView({behavior:"smooth"});
+}
+
+let riddles = [
+  { q: "RIDDLE A (edit later)", a: "a" },
+  { q: "RIDDLE B (edit later)", a: "b" },
+  { q: "RIDDLE C (edit later)", a: "c" },
+  { q: "RIDDLE D (edit later)", a: "d" },
+  { q: "RIDDLE E (edit later)", a: "e" }
+];
+
+let currentIndex = 0;
+
+function openRiddle(index) {
+  currentIndex = index;
+  document.getElementById("riddleText").innerText = riddles[index].q;
+  document.getElementById("riddleBox").style.display = "flex";
+}
+
+function checkAnswer() {
+  let input = document.getElementById("answerInput").value.toLowerCase();
+
+  if (input === riddles[currentIndex].a) {
+    document.getElementsByClassName("card")[currentIndex + 3].innerText =
+      riddles[currentIndex].a.toUpperCase();
+    document.getElementById("riddleBox").style.display = "none";
+  } else {
+    alert("Try again 😏❤️");
+  }
+}
+</script>
+</body>
+</html>
