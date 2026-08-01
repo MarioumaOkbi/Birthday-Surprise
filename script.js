@@ -157,19 +157,23 @@ if(index===2){
 
 function revealFive(){
 
+    const ball = document.getElementById("fallBall");
 
-    const ball =
-    document.getElementById("fallBall");
+    // Change the last ball into the number 5
+    ball.innerHTML = "5";
+    ball.style.fontSize = "70px";
+    ball.style.color = "#7A5C3E";
 
+    // Show the congratulation message
+    const message = document.getElementById("giftNumber");
 
-    ball.innerHTML="⑤";
+    message.innerHTML = `
+        ✨ Congratulations! ✨<br>
+        You have unlocked <strong>5 Special Gifts</strong> ❤️
+    `;
 
-
-    ball.style.fontSize="90px";
-
-
-document.getElementById("giftNumber").innerHTML =
-"✨ Congratulations! ✨<br>You have unlocked <strong>5 Special Gifts</strong> ❤️";
+    message.style.display = "block";
+}
 
 
 }
