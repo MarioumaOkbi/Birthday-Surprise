@@ -176,8 +176,6 @@ function revealFive(){
 }
 
 
-}
-
 
 
 
