@@ -439,11 +439,28 @@ animation-delay:.8s;
 }
 
 
-#giftNumber {
+#giftNumber{
 
-    font-size:80px;
+    display:block;
 
-    color:#d94f70;
+    margin-top:40px;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#EAD8A6;
+
+    -webkit-text-stroke:1px #7A5C3E;
+
+    text-shadow:
+        0 0 8px rgba(234,216,166,.8),
+        0 0 16px rgba(234,216,166,.6),
+        0 0 28px rgba(234,216,166,.5);
+
+    text-align:center;
+
+    line-height:1.5;
 
 }
 
