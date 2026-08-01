@@ -168,8 +168,8 @@ function revealFive(){
     ball.style.fontSize="90px";
 
 
-    document.getElementById("giftNumber").innerHTML =
-    "Congratulations!<br>You unlocked 5 gifts ❤️";
+document.getElementById("giftNumber").innerHTML =
+"✨ Congratulations! ✨<br>You have unlocked <strong>5 Special Gifts</strong> ❤️";
 
 
 }
