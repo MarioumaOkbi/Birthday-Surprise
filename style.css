@@ -521,6 +521,7 @@ animation-delay:.8s;
 .front,
 .back {
 
+
     position:absolute;
 
     width:100%;
@@ -533,13 +534,13 @@ animation-delay:.8s;
 
     padding:30px;
 
-    box-shadow:0 15px 35px #ddd;
+    box-shadow:0 15px 35px rgba(221,221,221,0.8);
 
     background:
     linear-gradient(
-    135deg,
-    #ffd6e0,
-    #fff
+        135deg,
+        #ffd6e0,
+        #fff5f8
     );
 
     display:flex;
@@ -551,6 +552,19 @@ animation-delay:.8s;
     align-items:center;
 
     text-align:center;
+
+}
+
+
+/* RIDDLE CARD GLOW */
+
+.riddle-card .front {
+
+    border:2px solid rgba(255,182,193,0.7);
+
+    box-shadow:
+        0 10px 30px rgba(255,182,193,0.35),
+        inset 0 0 20px rgba(255,255,255,0.8);
 
 }
 
