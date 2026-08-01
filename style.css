@@ -529,13 +529,28 @@ animation-delay:.8s;
 
     backface-visibility:hidden;
 
-    border-radius:20px;
+    border-radius:25px;
 
     padding:30px;
 
-    box-shadow:0 10px 30px #ddd;
+    box-shadow:0 15px 35px #ddd;
 
-    background:white;
+    background:
+    linear-gradient(
+    135deg,
+    #ffd6e0,
+    #fff
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
 
 }
 
