@@ -157,26 +157,49 @@ if(index===2){
 
 function revealFive(){
 
+    console.log("Reveal Five started");
+
+
     const ball = document.getElementById("fallBall");
 
-    // Change the last ball into the number 5
-    ball.innerHTML = "5";
-    ball.style.fontSize = "70px";
-    ball.style.color = "#7A5C3E";
-
-    // Show the congratulation message
     const message = document.getElementById("giftNumber");
 
-    message.innerHTML = `
-        ✨ Congratulations! ✨<br>
-        You have unlocked <strong>5 Special Gifts</strong> ❤️
+
+    if(!ball){
+
+        console.log("fallBall missing");
+
+        return;
+
+    }
+
+
+    if(!message){
+
+        console.log("giftNumber missing");
+
+        return;
+
+    }
+
+
+    ball.innerHTML = "5";
+
+    ball.style.fontSize = "70px";
+
+    ball.style.color = "#7A5C3E";
+
+
+    message.innerHTML =
+    `
+    ✨ Congratulations! ✨<br>
+    You have unlocked <strong>5 Special Gifts</strong> ❤️
     `;
 
+
     message.style.display = "block";
+
 }
-
-
-
 
 
 
