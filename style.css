@@ -1,0 +1,677 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Segoe UI", sans-serif;
+
+    background: white;
+
+    color: #333;
+
+    text-align: center;
+
+    overflow-x: hidden;
+
+}
+
+
+
+
+button {
+
+    border: none;
+
+    background: #d94f70;
+
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+button:hover {
+
+    background: #b83255;
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+
+
+
+/* OPENING */
+
+#opening {
+
+    height: 100vh;
+
+    background:
+
+    linear-gradient(
+    rgba(255,255,255,.8),
+    rgba(255,240,245,.9)
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+#opening h1 {
+
+    font-size:60px;
+
+    color:#b83255;
+
+    animation:fadeIn 3s;
+
+}
+
+
+#opening p {
+
+    font-size:24px;
+
+}
+
+
+
+
+
+
+
+/* HERO */
+
+
+.hero {
+
+    height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.hero img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:zoom 15s infinite alternate;
+
+}
+
+
+
+.overlay {
+
+    position:absolute;
+
+    bottom:50px;
+
+    width:100%;
+
+    color:white;
+
+    text-shadow:0 3px 10px black;
+
+}
+
+
+.overlay h2 {
+
+    font-size:50px;
+
+}
+
+
+
+
+
+
+
+/* MESSAGE */
+
+
+.message {
+
+    min-height:70vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:80px 20px;
+
+}
+
+
+.message h2 {
+
+    font-size:40px;
+
+    color:#b83255;
+
+}
+
+
+.message p {
+
+    max-width:700px;
+
+    margin:40px auto;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+
+
+/* VIDEO */
+
+
+.video-section {
+
+    padding:100px 20px;
+
+}
+
+
+.video-section h2 {
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+}
+
+
+video {
+
+    width:80%;
+
+    max-width:900px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px #ccc;
+
+}
+
+
+
+
+
+
+
+/* BIRTHDAY */
+
+
+#birthday {
+
+    min-height:60vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    background:#fff5f8;
+
+}
+
+
+#birthday h1 {
+
+    font-size:70px;
+
+    color:#d94f70;
+
+    animation:bounce 2s infinite;
+
+}
+
+
+
+
+
+
+
+/* GIFTS */
+
+
+.gift-section {
+
+    padding:100px 20px;
+
+}
+
+
+
+.gift-container {
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    margin-top:50px;
+
+}
+
+
+.gift-card {
+
+    width:250px;
+
+    height:250px;
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ffd6e0,
+    #fff
+    );
+
+
+    border-radius:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px #ddd;
+
+    transition:.5s;
+
+}
+
+
+
+.gift-card:hover {
+
+    transform:
+    translateY(-15px)
+    rotate(5deg);
+
+}
+
+
+
+#giftResult {
+
+    margin-top:40px;
+
+    font-size:35px;
+
+    color:#d94f70;
+
+}
+
+
+
+
+
+
+
+
+/* CLOWN */
+
+
+.clown-section {
+
+    padding:100px 20px;
+
+}
+
+
+
+.clown {
+
+    font-size:120px;
+
+}
+
+
+
+.balls span {
+
+    display:inline-block;
+
+    font-size:50px;
+
+    animation:juggle 1.5s infinite;
+
+}
+
+
+.balls span:nth-child(2){
+animation-delay:.2s;
+}
+
+
+.balls span:nth-child(3){
+animation-delay:.4s;
+}
+
+
+.balls span:nth-child(4){
+animation-delay:.6s;
+}
+
+
+.balls span:nth-child(5){
+animation-delay:.8s;
+}
+
+
+#giftNumber {
+
+    font-size:80px;
+
+    color:#d94f70;
+
+}
+
+
+
+
+
+
+
+/* RIDDLE CARDS */
+
+
+.riddles {
+
+    padding:100px 20px;
+
+}
+
+
+
+.riddle-container {
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+
+
+.riddle-card {
+
+    width:300px;
+
+    height:420px;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    transition:1s;
+
+}
+
+
+.riddle-card.flipped {
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+.front,
+.back {
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    backface-visibility:hidden;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px #ddd;
+
+    background:white;
+
+}
+
+
+
+.back {
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+.back img {
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+
+
+/* FINAL */
+
+
+.final {
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+    #fff,
+    #ffe6ef
+    );
+
+}
+
+
+
+.envelope {
+
+    font-size:120px;
+
+    cursor:pointer;
+
+}
+
+
+
+#finalMessage {
+
+    display:none;
+
+    font-size:30px;
+
+    max-width:700px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+
+@keyframes fadeIn {
+
+from {
+
+opacity:0;
+
+}
+
+to {
+
+opacity:1;
+
+}
+
+}
+
+
+
+@keyframes zoom {
+
+from {
+
+transform:scale(1);
+
+}
+
+to {
+
+transform:scale(1.15);
+
+}
+
+}
+
+
+
+@keyframes bounce {
+
+50% {
+
+transform:translateY(-20px);
+
+}
+
+}
+
+
+
+@keyframes juggle {
+
+50% {
+
+transform:translateY(-50px);
+
+}
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+#opening h1 {
+
+font-size:40px;
+
+}
+
+
+#birthday h1 {
+
+font-size:45px;
+
+}
+
+
+.hero img {
+
+height:100vh;
+
+}
+
+
+}
