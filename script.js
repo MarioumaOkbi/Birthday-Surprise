@@ -99,28 +99,28 @@ function chooseGift(card){
 
         setTimeout(()=>{
 
-            if(index===0){
+if(index===0){
 
-                c.innerHTML =
-                "✨<br>Mix & Match";
+    c.innerHTML =
+    "<span>✨<br>Mix & Match</span>";
 
-            }
-
-
-            if(index===1){
-
-                c.innerHTML =
-                "🎁<br>The Ultimate Experience";
-
-            }
+}
 
 
-            if(index===2){
+if(index===1){
 
-                c.innerHTML =
-                "🎁<br>The Ultimate Gift";
+    c.innerHTML =
+    "<span>🎁<br>The Ultimate Experience</span>";
 
-            }
+}
+
+
+if(index===2){
+
+    c.innerHTML =
+    "<span>🎁<br>The Ultimate Gift</span>";
+
+}
 
 
         },800);
