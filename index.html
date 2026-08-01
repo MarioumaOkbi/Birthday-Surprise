@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Ar'oshy ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="music/until-i-found-you.mp3" type="audio/mp3">
+</audio>
+
+
+<!-- OPENING SCREEN -->
+<section id="opening">
+
+    <h1>For Ar'oshy ❤️</h1>
+
+    <p>
+        Every story has a beginning...
+    </p>
+
+    <button onclick="startJourney()">
+        Tap to Begin ❤️
+    </button>
+
+</section>
+
+
+
+<!-- HERO PHOTO -->
+<section class="hero">
+
+    <img src="images/hero.jpg" alt="Our memory">
+
+    <div class="overlay">
+
+        <h2>
+            Our Story ❤️
+        </h2>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- LOVE MESSAGE -->
+
+<section class="message">
+
+<h2>
+A Message From Your Loved One ❤️
+</h2>
+
+
+<p>
+A message from your loved one will appear here...
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- VIDEO -->
+
+<section class="video-section">
+
+
+<h2>
+A Glimpse of Us Over the Years 🎥
+</h2>
+
+
+<video controls id="memoryVideo">
+
+    <source src="video/glimpse.mp4" type="video/mp4">
+
+</video>
+
+
+</section>
+
+
+
+
+
+
+<!-- BIRTHDAY -->
+
+<section id="birthday">
+
+
+<div id="confetti"></div>
+
+
+<h1>
+🎉 HAPPY BIRTHDAY AR'OSHY 🎉
+</h1>
+
+
+<p>
+Today is all about celebrating you ❤️
+</p>
+
+
+</section>
+
+
+
+
+
+
+<!-- GIFTS -->
+
+<section class="gift-section">
+
+
+<h2>
+Here Is Your Gift 🎁
+</h2>
+
+
+<p>
+Choose your gift and claim it by solving the riddles.
+</p>
+
+
+
+
+<div class="gift-container">
+
+
+<div class="gift-card" onclick="chooseGift(this)">
+
+🎁
+
+</div>
+
+
+
+<div class="gift-card" onclick="chooseGift(this)">
+
+🎁
+
+</div>
+
+
+
+
+<div class="gift-card" onclick="chooseGift(this)">
+
+🎁
+
+</div>
+
+
+
+</div>
+
+
+<div id="giftResult">
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- CLOWN -->
+
+<section class="clown-section">
+
+
+<h2>
+A little surprise...
+</h2>
+
+
+<div class="clown">
+
+🤡
+
+
+<div class="balls">
+
+<span>🔴</span>
+<span>🟡</span>
+<span>🔵</span>
+<span>🟢</span>
+<span id="fallBall">🟣</span>
+
+</div>
+
+
+</div>
+
+
+
+<h1 id="giftNumber">
+
+</h1>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- RIDDLES -->
+
+<section class="riddles">
+
+
+<h2>
+Your Five Gifts ❤️
+</h2>
+
+
+
+<div class="riddle-container">
+
+
+
+<div class="riddle-card">
+
+<div class="front">
+
+<h3>
+Riddle 1
+</h3>
+
+<p>
+A
+</p>
+
+
+<h4>
+Hint
+</h4>
+
+<p>
+B
+</p>
+
+
+<input placeholder="Answer">
+
+<button onclick="solveRiddle(this)">
+Solve
+</button>
+
+
+</div>
+
+
+<div class="back">
+
+<img src="images/gift1.jpg">
+
+<h3>
+C
+</h3>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="riddle-card">
+
+<div class="front">
+
+<h3>
+Riddle 2
+</h3>
+
+<p>
+A
+</p>
+
+<h4>
+Hint</h4>
+
+<p>B</p>
+
+
+<input placeholder="Answer">
+
+<button onclick="solveRiddle(this)">
+Solve
+</button>
+
+
+</div>
+
+
+<div class="back">
+
+<img src="images/gift2.jpg">
+
+<h3>C</h3>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="riddle-card">
+
+<div class="front">
+
+<h3>
+Riddle 3
+</h3>
+
+<p>A</p>
+
+<h4>Hint</h4>
+
+<p>B</p>
+
+
+<input placeholder="Answer">
+
+<button onclick="solveRiddle(this)">
+Solve
+</button>
+
+</div>
+
+
+<div class="back">
+
+<img src="images/gift3.jpg">
+
+<h3>C</h3>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="riddle-card">
+
+<div class="front">
+
+<h3>
+Riddle 4
+</h3>
+
+<p>A</p>
+
+<h4>Hint</h4>
+
+<p>B</p>
+
+
+<input placeholder="Answer">
+
+<button onclick="solveRiddle(this)">
+Solve
+</button>
+
+</div>
+
+
+<div class="back">
+
+<img src="images/gift4.jpg">
+
+<h3>C</h3>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="riddle-card">
+
+<div class="front">
+
+<h3>
+Riddle 5
+</h3>
+
+<p>A</p>
+
+<h4>Hint</h4>
+
+<p>B</p>
+
+
+<input placeholder="Answer">
+
+<button onclick="solveRiddle(this)">
+Solve
+</button>
+
+
+</div>
+
+
+<div class="back">
+
+<img src="images/gift5.jpg">
+
+<h3>C</h3>
+
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FINAL SURPRISE -->
+
+<section class="final">
+
+
+<div class="envelope" onclick="openEnvelope()">
+
+💌
+
+</div>
+
+
+
+<div id="finalMessage">
+
+<p>
+You have always given me life, love, happiness and memories.
+</p>
+
+<p>
+Today I want to repay you by giving you a glimpse of mine ❤️
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
