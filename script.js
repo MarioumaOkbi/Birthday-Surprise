@@ -152,52 +152,34 @@ if(index===2){
 
 
 
-// CLOWN REVEAL
-
+// GIFT REVEAL
 
 function revealFive(){
 
-    console.log("Reveal Five started");
-
-
-    const ball = document.getElementById("fallBall");
-
+    const boxes = document.querySelectorAll(".gift-box");
     const message = document.getElementById("giftNumber");
 
+    boxes.forEach((box,index)=>{
 
-    if(!ball){
+        setTimeout(()=>{
 
-        console.log("fallBall missing");
+            box.classList.add("active");
 
-        return;
+        }, index * 700);
 
-    }
+    });
 
+    setTimeout(()=>{
 
-    if(!message){
+        message.innerHTML = `
+            ✨ Congratulations! ✨<br>
+            You have unlocked <strong>5 Special Gifts</strong> ❤️
+        `;
 
-        console.log("giftNumber missing");
+        message.style.display = "block";
+        message.style.opacity = "1";
 
-        return;
-
-    }
-
-
-    ball.innerHTML = "5";
-
-    ball.style.fontSize = "70px";
-
-    ball.style.color = "#7A5C3E";
-
-
-    message.innerHTML =
-    `
-    ✨ Congratulations! ✨<br>
-    You have unlocked <strong>5 Special Gifts</strong> ❤️
-    `;
-
-
-    message.style.display = "block";
+    }, 3700);
 
 }
 
