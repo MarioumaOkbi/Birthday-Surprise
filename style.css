@@ -15,10 +15,11 @@ body {
     font-family: "Segoe UI", sans-serif;
 
 background: linear-gradient(
-    135deg,
-    #fff8e7,
-    #f7e7ce,
-    #ffffff
+    -45deg,
+    #fff0f5,
+    #ffe4c4,
+    #fff8dc,
+    #fce4ec
 );
 
 background-size:400% 400%;
