@@ -389,54 +389,6 @@ video {
 
 
 
-/* CLOWN */
-
-
-.clown-section {
-
-    padding:100px 20px;
-
-}
-
-
-
-.clown {
-
-    font-size:120px;
-
-}
-
-
-
-.balls span {
-
-    display:inline-block;
-
-    font-size:50px;
-
-    animation:juggle 1.5s infinite;
-
-}
-
-
-.balls span:nth-child(2){
-animation-delay:.2s;
-}
-
-
-.balls span:nth-child(3){
-animation-delay:.4s;
-}
-
-
-.balls span:nth-child(4){
-animation-delay:.6s;
-}
-
-
-.balls span:nth-child(5){
-animation-delay:.8s;
-}
 
 
 #giftNumber{
@@ -465,7 +417,85 @@ animation-delay:.8s;
 }
 
 
+.gift-reveal{
 
+    display:flex;
+    justify-content:center;
+    gap:25px;
+
+    margin-top:40px;
+
+    opacity:0;
+
+}
+
+.gift-box{
+
+    font-size:70px;
+
+    opacity:0;
+
+    transform:scale(.2);
+
+}
+
+@keyframes giftAppear{
+
+    0%{
+
+        opacity:0;
+        transform:scale(.2);
+
+    }
+
+    60%{
+
+        opacity:1;
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        opacity:1;
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes giftGlow{
+
+    from{
+
+        filter:
+        drop-shadow(0 0 5px gold);
+
+    }
+
+    to{
+
+        filter:
+        drop-shadow(0 0 25px gold)
+        drop-shadow(0 0 45px gold);
+
+    }
+
+}
+
+#giftNumber{
+
+    opacity:0;
+
+    transition:1.5s;
+
+    margin-top:40px;
+
+    color:#EAD8A6;
+
+    -webkit-text-stroke:1px #7A5C3E;
+
+}
 
 
 
@@ -678,15 +708,7 @@ transform:translateY(-20px);
 
 
 
-@keyframes juggle {
 
-50% {
-
-transform:translateY(-50px);
-
-}
-
-}
 
 
 
