@@ -205,13 +205,16 @@ button:hover {
 
 .message p {
 
-    max-width:700px;
+
+    max-width:900px;
 
     margin:40px auto;
 
     font-size:22px;
 
-    line-height:1.8;
+    line-height:1.9;
+
+    text-align:justify;
 
 }
 
