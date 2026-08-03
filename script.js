@@ -184,60 +184,40 @@ function revealFive(){
 }
 
 
-
-
-
-// RIDDLE SOLVING
-
-
 function solveRiddle(button){
 
+    let card = button.closest(".riddle-card");
 
-    let card =
-    button.closest(".riddle-card");
+    let input = card.querySelector("input");
 
+    let answer = input.value.trim().toLowerCase();
 
-    let input =
-    card.querySelector("input");
+    let cards = document.querySelectorAll(".riddle-card");
+    let index = [...cards].indexOf(card);
 
+    const answers = [
+        ["cooking", "cooking class"],
+        ["nike", "nike air"],
+        ["ck", "ck boxers", "boxers", "calvin klein"],
+        ["travel", "travelling", "traveling", "trip"],
+        ["skydiving", "sky diving", "skydive"]
+    ];
 
-    let answer =
-    input.value.trim().toLowerCase();
-
-
-
-    /*
-       TEMPORARY ANSWER
-
-       Replace "a"
-       with your real answer
-       for each gift later
-    */
-
-
-    if(answer==="a"){
-
+    if (answers[index].includes(answer)) {
 
         card.classList.add("flipped");
+        card.style.boxShadow = "0 0 40px pink";
 
-
-        card.style.boxShadow =
-        "0 0 40px pink";
-
-
-    }
-
-
-    else{
-
+    } else {
 
         alert("Try again ❤️");
 
-
     }
 
-
 }
+
+
+
 
 
 
