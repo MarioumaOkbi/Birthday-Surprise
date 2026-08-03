@@ -620,6 +620,7 @@ video {
 /* FRONT CARD */
 
 .front{
+    position:relative;
     justify-content:flex-start;
     padding-top:20px;
 }
