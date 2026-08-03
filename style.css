@@ -610,7 +610,10 @@ video {
     object-fit:cover;
 
     border-radius:15px;
-
+.front h3,
+.front h4 {
+    color: #7A5C3E;
+}
 }
 
 /* FINAL */
@@ -622,11 +625,9 @@ video {
 
     display:flex;
 
-    flex-direction:column;
 
     justify-content:center;
 
-    align-items:center;
 
     background:
 
