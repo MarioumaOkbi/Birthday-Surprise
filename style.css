@@ -610,11 +610,60 @@ video {
     object-fit:cover;
 
     border-radius:15px;
+
+}
+
+
+/* FRONT CARD */
+
+.front{
+    justify-content:flex-start;
+    padding-top:20px;
+}
+
 .front h3,
-.front h4 {
-    color: #7A5C3E;
+.front h4{
+    color:#7A5C3E;
 }
+
+.front h3{
+    margin-bottom:15px;
 }
+
+.front p:first-of-type{
+    margin-bottom:25px;
+}
+
+.front h4{
+    margin-bottom:10px;
+}
+
+.front input{
+    margin-top:20px;
+    width:90%;
+}
+
+.front button{
+    margin-top:auto;
+    margin-bottom:10px;
+    width:80%;
+}
+
+
+/* BACK CARD */
+
+.back h3{
+    font-size:22px;
+    color:#7A5C3E;
+    margin:15px 0 10px;
+}
+
+.back p{
+    font-size:15px;
+    line-height:1.5;
+    width:90%;
+}
+
 
 /* FINAL */
 
