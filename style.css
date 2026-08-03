@@ -620,7 +620,6 @@ video {
 /* FRONT CARD */
 
 .front{
-    position:relative;
     justify-content:flex-start;
     padding-top:20px;
 }
@@ -629,7 +628,9 @@ video {
 .front h4{
     color:#7A5C3E;
 }
-
+.front p:nth-of-type(2){
+    height:120px;
+}
 .front h3{
     font-size:40px;
 }
@@ -651,21 +652,15 @@ video {
 }
 
 .front input{
-    position:absolute;
-    top:340px;      /* Distance from the top of the card */
-    left:50%;
-    transform:translateX(-50%);
-    width:85%;
+    margin-top:20px;
+    width:90%;
 }
 
 .front button{
-    position:absolute;
-    bottom:20px;    /* Distance from the bottom of the card */
-    left:50%;
-    transform:translateX(-50%);
+    margin-top:auto;
+    margin-bottom:10px;
     width:80%;
 }
-
 
 /* BACK CARD */
 
