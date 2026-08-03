@@ -580,7 +580,7 @@ video {
 
     flex-direction:column;
 
-    justify-content:center;
+    justify-content:flex-start;
 
     align-items:center;
 
@@ -625,8 +625,11 @@ video {
 
     display:flex;
 
+    flex-direction:column;
 
     justify-content:center;
+
+    align-items:center;
 
 
     background:
