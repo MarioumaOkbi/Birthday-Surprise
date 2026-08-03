@@ -651,13 +651,18 @@ video {
 }
 
 .front input{
-    margin-top:20px;
-    width:90%;
+    position:absolute;
+    top:340px;      /* Distance from the top of the card */
+    left:50%;
+    transform:translateX(-50%);
+    width:85%;
 }
 
 .front button{
-    margin-top:auto;
-    margin-bottom:10px;
+    position:absolute;
+    bottom:20px;    /* Distance from the bottom of the card */
+    left:50%;
+    transform:translateX(-50%);
     width:80%;
 }
 
