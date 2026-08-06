@@ -716,13 +716,19 @@ video {
 
 #finalMessage {
 
-    display:none;
+    display: none;
 
-    font-size:30px;
+    max-width: 900px;      /* same width as the first message */
 
-    max-width:700px;
+    margin: 0 auto;
 
-    line-height:1.8;
+    padding: 40px 20px 0;  /* leaves space before the first paragraph */
+
+    font-size: 20px;       /* same as .message p */
+
+    line-height: 1.9;
+
+    text-align: justify;
 
 }
 
