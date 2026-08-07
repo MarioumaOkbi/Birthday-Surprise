@@ -9,7 +9,16 @@ function startJourney(){
     });
 
 
-    document.getElementById("opening").style.display = "none";
+document.getElementById("opening").style.display = "none";
+
+// Show first section slowly
+setTimeout(() => {
+  document.getElementById("section1").style.opacity = "1";
+}, 800);
+
+setTimeout(() => {
+  document.getElementById("section2").style.opacity = "1";
+}, 2500);
 
 
     startConfetti();
