@@ -11,13 +11,13 @@ function startJourney(){
 
 document.getElementById("opening").style.display = "none";
 
-// Show first section slowly
+
 setTimeout(() => {
-  document.getElementById("section1").style.opacity = "1";
+  document.getElementById("section1").classList.add("show");
 }, 800);
 
 setTimeout(() => {
-  document.getElementById("section2").style.opacity = "1";
+  document.getElementById("section2").classList.add("show");
 }, 2500);
 
 
